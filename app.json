@@ -1,15 +1,15 @@
 {
-    "name": "Mikthon",
+    "name": "MAX",
     "description": "User bot for telegram !",
     "stack": "container",
     "logo": "https://graph.org/file/41cc2350b500c3ff3b387.jpg",
-    "repository": "https://github.com/eooe31/wwn",
+    "repository": "https://github.com/eooe31/wwwwn",
     "keywords": [
         "python",
         "chatbot",
         "telegrambot"
     ],
-    "website": "https://github.com/eooe31/wwn",
+    "website": "https://github.com/eooe31/wwwwn",
     "env": {
         "API_ID": {
             "description": "ايبي ايدي",

@@ -16,9 +16,9 @@ import threading
 import asyncio
 from telethon import events
 
-a = 'wertuiopassfghkzxcvnm'
-b = '123456789'
-e = 'wertuiopassfghkzxcvnm123456789'
+a = 'qwertyuiopassdfghjklzxcvbnm'
+b = '1234567890'
+e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
 
 banned = []
 with open("banned.txt", "r") as f:
@@ -51,58 +51,63 @@ def check_user(username):
 
 
 def gen_user(choice):
-    if choice == "سداسي":
-        c = d = random.choices(e)
-        d = random.choices(e)
-        f = [c[0], d[0], c[0], c[0], c[0], d[0]]
-        random.shuffle(f)
-        username = "".join(f)
-
-    elif choice == "حروف":
+    if choice == "ثلاثي":
         c = random.choices(a)
         d = random.choices(a)
-        s = random.choices(a)
-        f = [c[0], "_", d[0], "_", s[0]]
-        username = "".join(f)
-    elif choice == "سداسيات":
-        c = d = random.choices(a)
-        d = random.choices(e)
-        f = [c[0], c[0], c[0], c[0], c[0], d[0]]
-        random.shuffle(f)
-        username = "".join(f)
-    elif choice == "نص":
-        c = random.choices(a)
-        d = random.choices(b)
-        s = random.choices(a)
-        f = [c[0], "_", d[0], "_", s[0]]
-        username = "".join(f) 
-
-    elif choice == "خمس":
-        c = random.choices(e)
-        d = random.choices(e)
-
-        f = [c[0], d[0], c[0], c[0], d[0]]
-        random.shuffle(f)
-        username = "".join(f)
-
-    elif choice == "خماسي":
-        c = d = random.choices(a)
-        d = random.choices(b)
-        f = [c[0], c[0], c[0], d[0], d[0], d[0]]
-        random.shuffle(f)
-        username = "".join(f)
-
+        s = random.choices(e)
+        f = [c[0], "_", s[0], "_", d[0]]
+        username = ''.join(f)
+        if username in banned[0]:
+            c = random.choices(a)
+            d = random.choices(e)
+            s = random.choices(b)
+            f = [c[0], "_", s[0], "_", d[0]]
+            username = ''.join(f)
+        else:
+            pass
     elif choice == "خير":
         c = random.choices(a)
-        d = random.choices(a)
-        s = random.choices(b)
-        f = [c[0], "_", d[0], "_", s[0]]
+        d = random.choices(e)
+        f = [c[0], "_", d[0], "_", d[0]]
         username = "".join(f)
-    elif choice == "ثلاثي":
+    elif choice == "نص":
+        c = d = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], "_", d[0], "_", c[0]]
+        username = "".join(f)
+    elif choice == "بوتات":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
-        f = [c[0], "_", d[0], "_", s[0]]
+        f = [c[0], s[0], d[0]]
+        # random.shuffle(f)
+        username = "".join(f)
+        username = username + "bot"
+
+    elif choice == "اول":
+        c = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], "_", c[0], "_", d[0]]
+        username = "".join(f)
+
+    elif choice == "خماسي":
+        c = d = random.choices(e)
+        d = random.choices(e)
+        f = [c[0], c[0], c[0], c[0], d[0]]
+        random.shuffle(f)
+        username = "".join(f)
+
+    elif choice == "حرفين":
+        c = d = random.choices(e)
+        d = random.choices(e)
+        f = [c[0], c[0], c[0], d[0], d[0]]
+        random.shuffle(f)
+        username = "".join(f)
+    elif choice == "تيست":
+        c = d = random.choices(a)
+        d = random.choices(b)
+        f = [c[0], c[0], d[0], d[0], c[0], "_", d[0], "_", c[0]]
+        random.shuffle(f)
         username = "".join(f)
     else:
         return "error"
@@ -115,30 +120,25 @@ async def _(event):
         '''
 **-- -- -- -- -- -- -- -- --
  الانواع :
- 	
-  ثلاثي
- s_x_a - s_5_7
+ ثلاثي
+ s_x_m
  -- -- -- -- - 
- حروف
- s_x_a
- -- -- -- -- - 
- سداسي 
- soooos
+ خير
+ s_x_x
  -- -- -- -- -- -- -- -- -- -- --
-  سداسيات
-  sooooo
- -- -- -- -- -- 
   نص
-  s_5_x
- -- -- -- -- --
-  خير
- s_x_6
- -- -- -- -- - 
- خماسي
- s999ss
+  s_v_s
  -- -- -- -- -- 
- خمس
- sssxx
+ `اول`
+  s_s_x
+ -- -- -- -- --
+ خماسي
+ حرف
+ -- -- -- -- -- 
+ حرفين 
+ sxxxs
+ -- -- -- -- -- 
+ بوتات
  -- -- -- -- -- 
    طريقه الصيد هيه كالتالي
  - .صيد + نوع الصيد تكتب الاسم 
@@ -153,7 +153,7 @@ async def _(event):
  الامر:   `.حالة الصيد`
  • لمعرفة عدد المحاولات للصيد
 
- @wwwwn**
+@MAX985**
 
 '''
     )
