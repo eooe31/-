@@ -1,4 +1,16 @@
-### FOR : [MAX](https://t.me/MAX985) ###
+لا تغير الحقوق ضلعي
 
-![MAX](https://telegra.ph/file/03671e4f4db95bfbdf9d2.jpg)
+### تابع : [محمد](https://t.me/M_B_U) ###
+
+
+
+
+
+
+
+
+
+
+
+
 
